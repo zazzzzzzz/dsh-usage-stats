@@ -1,0 +1,4 @@
+# 用量统计插件的 bundle patch：把它的 dsh.client 行插进 Web 客户端清单。
+- insert:
+    - id: ui-usage-stats
+      name: 'dsh-usage-stats'

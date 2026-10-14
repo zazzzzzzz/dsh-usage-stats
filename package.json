@@ -1,0 +1,57 @@
+{
+  "name": "dsh-usage-stats",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 左侧栏的模型 Token 用量统计面板：跨会话汇总累计用量、连续使用天数、活动热力图、每日分模型趋势与模型占比",
+  "type": "module",
+  "main": "host/index.js",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./host/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test test/usage.test.mjs test/routes.test.mjs"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.7"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "host",
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "cordis-plugin",
+    "usage",
+    "token",
+    "statistics"
+  ],
+  "author": "zazzzzzzzz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zazzzzzzz/dsh-usage-stats.git"
+  },
+  "homepage": "https://github.com/zazzzzzzz/dsh-usage-stats#readme",
+  "bugs": {
+    "url": "https://github.com/zazzzzzzz/dsh-usage-stats/issues"
+  },
+  "license": "MIT"
+}
